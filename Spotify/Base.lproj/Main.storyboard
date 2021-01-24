@@ -11,7 +11,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,9 +78,9 @@
         <!--Start-->
         <scene sceneID="VFd-us-e1L">
             <objects>
-                <viewController id="HTs-YK-ADP" customClass="StartVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HTs-YK-ADP" customClass="StartVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="41r-j0-AET">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-wX-SLj">
@@ -115,7 +115,7 @@
         <scene sceneID="W4D-1i-6WT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hG-7x-Cnf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Start" selectedImage="homekit" catalog="system" id="6f4-hj-gJq"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="homekit" catalog="system" id="6f4-hj-gJq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Abj-HZ-bx1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -136,10 +136,11 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YMd-U7-1sr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HKK-Iu-r8I"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Uo-m3-z8F">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7Uo-m3-z8F">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <variation key="heightClass=regular-widthClass=regular" selectionIndicatorImage="homekit" catalog="system"/>
                     </tabBar>
                     <connections>
                         <segue destination="4hG-7x-Cnf" kind="relationship" relationship="viewControllers" id="2z5-Yz-thl"/>
@@ -152,7 +153,7 @@
         <!--User ProfileVC-->
         <scene sceneID="csf-G0-av7">
             <objects>
-                <viewController id="JEZ-uY-kac" customClass="UserProfileVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JEZ-uY-kac" customClass="UserProfileVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbW-RZ-mFO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,22 +187,67 @@
         <!--TracksVC-->
         <scene sceneID="LOP-DT-i6p">
             <objects>
-                <viewController id="vrG-6Q-GOa" customClass="TracksVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vrG-6Q-GOa" customClass="TracksVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcS-0e-pQL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-af-zhW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-af-zhW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ev9-vZ-74f" customClass="SongCell" customModule="Sporify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="Ev9-vZ-74f" customClass="SongCell" customModule="Spotify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ev9-vZ-74f" id="TnN-qj-hpE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="yKN-f1-BLE">
+                                                    <rect key="frame" x="20" y="11" width="244" height="121"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-f9-vsp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="244" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyZ-tK-srB">
+                                                            <rect key="frame" x="0.0" y="53" width="244" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-wl-1Te">
+                                                            <rect key="frame" x="0.0" y="101.5" width="244" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-uO-k1y">
+                                                    <rect key="frame" x="274" y="10" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="XXC-uO-k1y" secondAttribute="height" multiplier="1:1" id="fMs-7W-8de"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XXC-uO-k1y" firstAttribute="top" secondItem="TnN-qj-hpE" secondAttribute="top" constant="10" id="DQU-0u-cDI"/>
+                                                <constraint firstItem="XXC-uO-k1y" firstAttribute="leading" secondItem="yKN-f1-BLE" secondAttribute="trailing" constant="10" id="RKx-du-BPd"/>
+                                                <constraint firstAttribute="bottom" secondItem="XXC-uO-k1y" secondAttribute="bottom" constant="20" id="TaE-pI-4gW"/>
+                                                <constraint firstAttribute="trailing" secondItem="XXC-uO-k1y" secondAttribute="trailing" constant="20" id="nfk-tM-Vay"/>
+                                                <constraint firstItem="yKN-f1-BLE" firstAttribute="leading" secondItem="TnN-qj-hpE" secondAttribute="leading" constant="20" symbolic="YES" id="p91-uX-yRl"/>
+                                                <constraint firstAttribute="bottom" secondItem="yKN-f1-BLE" secondAttribute="bottom" constant="18" id="vMD-wr-qQM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImage" destination="XXC-uO-k1y" id="41y-TO-2m1"/>
+                                            <outlet property="albumLabel" destination="EyZ-tK-srB" id="JK8-xW-bfV"/>
+                                            <outlet property="artistLabel" destination="7N6-f9-vsp" id="uxn-eG-9k9"/>
+                                            <outlet property="trackLabel" destination="r6a-wl-1Te" id="aO8-OM-IaK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -221,10 +267,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOV-J8-A8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3645" y="215"/>
+            <point key="canvasLocation" x="3644.9275362318845" y="214.62053571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="400" height="400"/>
         <image name="Logo" width="1920" height="1080"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
