@@ -29,7 +29,7 @@
                                         <state key="normal" title="Login to Spotify"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvb-Je-WDl"/>
-                                            <segue destination="YMd-U7-1sr" kind="show" identifier="toStartVC" id="pQI-sA-0gy"/>
+                                            <segue destination="YMd-U7-1sr" kind="presentation" identifier="toStartVC" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pQI-sA-0gy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuD-FL-FNP">
@@ -78,13 +78,13 @@
         <!--Start-->
         <scene sceneID="VFd-us-e1L">
             <objects>
-                <viewController id="HTs-YK-ADP" sceneMemberID="viewController">
+                <viewController id="HTs-YK-ADP" customClass="StartVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="41r-j0-AET">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-wX-SLj">
-                                <rect key="frame" x="0.0" y="2" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <connections>
                                     <segue destination="vrG-6Q-GOa" kind="embed" id="WHq-ws-Ih6"/>
                                 </connections>
@@ -102,7 +102,7 @@
                     <navigationItem key="navigationItem" title="Start" id="80L-UL-n4x">
                         <barButtonItem key="rightBarButtonItem" image="person" catalog="system" id="Qdl-2Z-V7I">
                             <connections>
-                                <segue destination="JEZ-uY-kac" kind="presentation" identifier="toUserDetail" id="bIE-P0-eR1"/>
+                                <segue destination="JEZ-uY-kac" kind="presentation" identifier="toUserProfile" id="bIE-P0-eR1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -118,7 +118,7 @@
                     <tabBarItem key="tabBarItem" title="Start" selectedImage="homekit" catalog="system" id="6f4-hj-gJq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Abj-HZ-bx1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -149,31 +149,50 @@
             </objects>
             <point key="canvasLocation" x="898.55072463768124" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--User ProfileVC-->
         <scene sceneID="csf-G0-av7">
             <objects>
-                <viewController id="JEZ-uY-kac" sceneMemberID="viewController">
+                <viewController id="JEZ-uY-kac" customClass="UserProfileVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbW-RZ-mFO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="POn-Jd-DGw">
+                                <rect key="frame" x="83" y="374" width="250" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="User Name">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xf4-0P-dMX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EgS-bz-OVn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="POn-Jd-DGw" firstAttribute="leading" secondItem="EgS-bz-OVn" secondAttribute="leading" constant="83" id="3Sp-XL-KkZ"/>
+                            <constraint firstItem="EgS-bz-OVn" firstAttribute="trailing" secondItem="POn-Jd-DGw" secondAttribute="trailing" constant="81" id="LEf-zg-24a"/>
+                            <constraint firstItem="EgS-bz-OVn" firstAttribute="bottom" secondItem="POn-Jd-DGw" secondAttribute="bottom" constant="384" id="lC3-74-RDg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egM-m4-D11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="-371"/>
+            <point key="canvasLocation" x="3660.8695652173915" y="-371.65178571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--TracksVC-->
         <scene sceneID="LOP-DT-i6p">
             <objects>
-                <viewController id="vrG-6Q-GOa" sceneMemberID="viewController">
+                <viewController id="vrG-6Q-GOa" customClass="TracksVC" customModule="Sporify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcS-0e-pQL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="703"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-af-zhW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ev9-vZ-74f">
@@ -187,6 +206,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dsb-Ka-kBL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EoI-af-zhW" firstAttribute="top" secondItem="KcS-0e-pQL" secondAttribute="top" id="5Ye-tg-d85"/>

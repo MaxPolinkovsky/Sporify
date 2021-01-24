@@ -6,10 +6,6 @@
 //
 
 
-//mySpotify
-//
-//Client ID 2d4c3bc0f5bb4f6995b90628e53d2c84
-//Client Secret ca8fee27bbaa415fa63e9415eb6511d0
 
 import UIKit
 
@@ -22,7 +18,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        // Do any additional setup after loading the view.
+        
     }
 
     
