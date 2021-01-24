@@ -195,7 +195,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ev9-vZ-74f">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ev9-vZ-74f" customClass="SongCell" customModule="Sporify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ev9-vZ-74f" id="TnN-qj-hpE">
@@ -215,6 +215,9 @@
                             <constraint firstItem="EoI-af-zhW" firstAttribute="leading" secondItem="KcS-0e-pQL" secondAttribute="leading" id="lMI-Mi-cKB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EoI-af-zhW" id="G76-i2-wkr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOV-J8-A8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
