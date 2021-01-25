@@ -21,7 +21,6 @@ class LoginVC: UIViewController {
         
     }
 
-    
     func setupUI(){
         loginButton.layer.cornerRadius = 20
         loginButton.backgroundColor = .azure
@@ -30,9 +29,12 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
+        let playURI = Manager.shared.configuration.playURI!
+        Manager.shared.appRemote.authorizeAndPlayURI(playURI)
     }
 }
 

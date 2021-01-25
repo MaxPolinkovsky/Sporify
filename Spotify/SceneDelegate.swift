@@ -7,27 +7,34 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
+    
    
     var window: UIWindow?
     
     static private let kAccessTokenKey = "access-token-key"
     
     var accessToken = defaults.string(forKey: kAccessTokenKey) {
-            didSet {
-                let defaults = UserDefaults.standard
-                defaults.set(accessToken, forKey: SceneDelegate.kAccessTokenKey)
-            }
+        didSet {
+            let defaults = UserDefaults.standard
+            defaults.set(accessToken, forKey: SceneDelegate.kAccessTokenKey)
         }
+    }
     
     lazy var appRemote: SPTAppRemote = {
-            let configuration = SPTConfiguration(clientID: clientID, redirectURL: redirectURI)
-            let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
-            appRemote.connectionParameters.accessToken = self.accessToken
-            appRemote.delegate = self
-            return appRemote
-        }()
+        let configuration = SPTConfiguration(clientID: clientID, redirectURL: redirectURI)
+        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+        appRemote.connectionParameters.accessToken = self.accessToken
+        appRemote.delegate = self
+        return appRemote
+    }()
     
+    static func shared() -> SceneDelegate {
+        let scene = UIApplication.shared.connectedScenes.first
+        let sceneDelegate: SceneDelegate = ((scene?.delegate as? SceneDelegate)!)
+        return sceneDelegate
+    }
+
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let url = URLContexts.first?.url else {
             return
@@ -38,10 +45,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
         if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
             appRemote.connectionParameters.accessToken = access_token
             self.accessToken = access_token
-        } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
+        } else if (parameters?[SPTAppRemoteErrorDescriptionKey]) != nil {
             // Show the error
         }
     }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -76,7 +84,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
+    
+    //MARK: -SPTAppRemotePlayerStateDelegate
+    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
+        print(#function)
+    }
+    
+    //MARK: -SPTAppRemoteDelegate
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         print(#function)
     }
@@ -88,7 +102,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         print(#function)
     }
-    
-
 }
 

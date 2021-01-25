@@ -9,39 +9,14 @@ import UIKit
 
 class TracksVC: UIViewController {
     
-    var songs = [Song(artistName: "Rnado",
-                      albumName: "123 Other",
-                      imageName: "1",
-                      trackName: "song1"),
-                 Song(artistName: "Camilla Cabello",
-                      albumName: "Havana album",
-                      imageName: "3",
-                      trackName: "song2"),
-                 Song(artistName: "Coldplay",
-                      albumName: "123 Something",
-                      imageName: "2",
-                      trackName: "song3"),
-                 Song(artistName: "Rnado",
-                      albumName: "123 Other",
-                      imageName: "1",
-                      trackName: "song1"),
-                 Song(artistName: "Camilla Cabello",
-                      albumName: "Havana album",
-                      imageName: "3",
-                      trackName: "song2"),
-                 Song(artistName: "Coldplay",
-                      albumName: "123 Something",
-                      imageName: "2",
-                      trackName: "song3"),
-    ]
+    let songs = Manager.shared.songs
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
-        //        self.tableView.delegate = self
-        
+        //        self.tableView.delegate = self   
     }
 }
 
