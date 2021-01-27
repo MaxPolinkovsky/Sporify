@@ -36,5 +36,7 @@ class LoginVC: UIViewController {
         let playURI = Manager.shared.configuration.playURI!
         Manager.shared.appRemote.authorizeAndPlayURI(playURI)
     }
+    
+    
 }
 

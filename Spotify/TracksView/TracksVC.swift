@@ -9,36 +9,82 @@ import UIKit
 
 class TracksVC: UIViewController {
     
-    let songs = Manager.shared.songs
+    //https://johncodeos.com/how-to-add-search-in-uitableview-using-swift/
     
+    let songs = Manager.shared.songs
+    var filteredSongs: [Song] = []
+    var searching = false
+
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.searchBar.delegate = self
         self.tableView.dataSource = self
-        //        self.tableView.delegate = self   
+        self.tableView.delegate = self
+        tableView.reloadData()
+    }
+    //MARK: -?- после запуска сразу срабатывает. Почему?
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.tableView.dataSource = nil
+//        self.tableView.delegate = nil
+//        super.viewDidAppear(animated)
+//    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()  
     }
 }
 
 extension TracksVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch tableView {
-        case self.tableView:
-            return self.songs.count
-        default:
-            return 0
+        if searching {
+            return filteredSongs.count
+        } else {
+            return songs.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! SongCell
-        let song = songs[indexPath.row]
-        cell.albumLabel.text = song.albumName
-        cell.albumImage.image = UIImage(named: song.imageName)
-        cell.artistLabel.text = song.artistName
-        cell.trackLabel.text = song.trackName
+        isFiltred(indexPath, cell)
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    fileprivate func isFiltred(_ indexPath: IndexPath, _ cell: SongCell) {
+        if searching {
+            let filteredSong = filteredSongs[indexPath.row]
+            cell.albumLabel.text = filteredSong.albumName
+            cell.albumImage.image = UIImage(named: filteredSong.imageName)
+            cell.artistLabel.text = filteredSong.artistName
+            cell.trackLabel.text = filteredSong.trackName
+        } else {
+            let song = songs[indexPath.row]
+            cell.albumLabel.text = song.albumName
+            cell.albumImage.image = UIImage(named: song.imageName)
+            cell.artistLabel.text = song.artistName
+            cell.trackLabel.text = song.trackName
+        }
+    }
+}
+
+extension TracksVC: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredSongs = songs.filter { $0.artistName.lowercased().prefix(searchText.count) == searchText.lowercased() ||
+            $0.albumName.lowercased().prefix(searchText.count) == searchText.lowercased() || $0.trackName.lowercased().prefix(searchText.count) == searchText.lowercased()
+            
+        }
+        searching = true
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
     }
 }
