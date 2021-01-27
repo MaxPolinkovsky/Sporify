@@ -13,7 +13,7 @@ class Manager {
     static let shared = Manager()
     
     var configuration: SPTConfiguration = {
-        let configuration = SPTConfiguration(clientID: clientID, redirectURL: redirectURI)
+        let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
         //играет последний трек пользователя
         configuration.playURI = ""
         // Set these url's to your backend which contains the secret to exchange for an access token
@@ -22,8 +22,6 @@ class Manager {
         configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
         return configuration
     }()
-
-    let appRemote = SceneDelegate.shared().appRemote
 
     var songs = [Song(artistName: "Rnado",
                       albumName: "123 Other",

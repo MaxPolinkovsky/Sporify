@@ -7,26 +7,26 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
    
-    static private let kAccessTokenKey = "access-token-key"
-    
-    var accessToken = defaults.string(forKey: kAccessTokenKey) {
-        didSet {
-            let defaults = UserDefaults.standard
-            defaults.set(accessToken, forKey: SceneDelegate.kAccessTokenKey)
-        }
-    }
-    
-    lazy var appRemote: SPTAppRemote = {
-        let configuration = SPTConfiguration(clientID: clientID, redirectURL: redirectURI)
-        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
-        appRemote.connectionParameters.accessToken = self.accessToken
-        appRemote.delegate = self
-        return appRemote
-    }()
+//    static private let kAccessTokenKey = "access-token-key"
+//
+//    var accessToken = defaults.string(forKey: kAccessTokenKey) {
+//        didSet {
+//            let defaults = UserDefaults.standard
+//            defaults.set(accessToken, forKey: SceneDelegate.kAccessTokenKey)
+//        }
+//    }
+//
+//    lazy var appRemote: SPTAppRemote = {
+//        let configuration = SPTConfiguration(clientID: clientID, redirectURL: redirectURI)
+//        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+//        appRemote.connectionParameters.accessToken = self.accessToken
+//        appRemote.delegate = self
+//        return appRemote
+//    }()
     
     static func shared() -> SceneDelegate {
         let scene = UIApplication.shared.connectedScenes.first
@@ -35,15 +35,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else {return}
-        let parameters = appRemote.authorizationParameters(from: url);
+//        guard let url = URLContexts.first?.url else {return}
+//        let parameters = appRemote.authorizationParameters(from: url);
         
-        if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-            appRemote.connectionParameters.accessToken = access_token
-            self.accessToken = access_token
-        } else if (parameters?[SPTAppRemoteErrorDescriptionKey]) != nil {
-            // Show the error
-        }
+        
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -81,22 +76,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
         // to restore the scene back to its current state.
     }
     
-    //MARK: -SPTAppRemotePlayerStateDelegate
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        print(#function)
-    }
-    
-    //MARK: -SPTAppRemoteDelegate
-    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        print(#function)
-    }
-    
-    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        print(#function)
-    }
-    
-    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        print(#function)
-    }
+//    //MARK: -SPTAppRemotePlayerStateDelegate
+//    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
+//        print(#function)
+//    }
+//    
+//    //MARK: -SPTAppRemoteDelegate
+//    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+//        print(#function)
+//    }
+//    
+//    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
+//        print(#function)
+//    }
+//    
+//    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
+//        print(#function)
+//    }
 }
 

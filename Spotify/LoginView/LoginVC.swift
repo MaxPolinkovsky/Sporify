@@ -10,7 +10,9 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
+    //https://garretthughes3.medium.com/unlocking-the-powers-of-spotifys-sdk-with-ios-on-swift-5-5b18b0f1fa65
+    
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var createAccountButton: UIButton!
@@ -29,12 +31,16 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        let playURI = Manager.shared.configuration.playURI!
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appRemote = appDelegate.appRemote
+        appRemote.authorizeAndPlayURI(playURI)
         
+        print("Answer: \(appDelegate.accessToken)")
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
-        let playURI = Manager.shared.configuration.playURI!
-        Manager.shared.appRemote.authorizeAndPlayURI(playURI)
+
     }
     
     
