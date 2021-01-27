@@ -25,13 +25,14 @@ class TracksVC: UIViewController {
         self.tableView.delegate = self
         tableView.reloadData()
     }
-    //MARK: -?- после запуска сразу срабатывает. Почему?
-//    override func viewDidAppear(_ animated: Bool) {
-//        self.tableView.dataSource = nil
-//        self.tableView.delegate = nil
-//        super.viewDidAppear(animated)
-//    }
-    
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.searchBar.delegate = nil
+        self.tableView.dataSource = nil
+        self.tableView.delegate = nil
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()  
     }
@@ -76,7 +77,6 @@ extension TracksVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredSongs = songs.filter { $0.artistName.lowercased().prefix(searchText.count) == searchText.lowercased() ||
             $0.albumName.lowercased().prefix(searchText.count) == searchText.lowercased() || $0.trackName.lowercased().prefix(searchText.count) == searchText.lowercased()
-            
         }
         searching = true
         tableView.reloadData()
