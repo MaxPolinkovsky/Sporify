@@ -55,6 +55,23 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = DetailVC()
+        if let indexPath = tableView.indexPathForSelectedRow {
+        if searching {
+            dvc.song = filteredSongs[indexPath.row]
+            print(dvc.song)
+        } else {
+            dvc.song = songs[indexPath.row]
+            print(dvc.song)
+        }
+//            title = dvc.artistName.text
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true)
+        
+        }
+    }
+    
     fileprivate func isFiltred(_ indexPath: IndexPath, _ cell: SongCell) {
         if searching {
             let filteredSong = filteredSongs[indexPath.row]
