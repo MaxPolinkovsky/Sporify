@@ -14,7 +14,7 @@ class TracksVC: UIViewController {
     let songs = Manager.shared.songs
     var filteredSongs: [Song] = []
     var searching = false
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,14 +25,14 @@ class TracksVC: UIViewController {
         self.tableView.delegate = self
         tableView.reloadData()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.searchBar.delegate = nil
         self.tableView.dataSource = nil
         self.tableView.delegate = nil
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()  
     }
@@ -55,20 +55,14 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dvc = DetailVC()
-        if let indexPath = tableView.indexPathForSelectedRow {
-        if searching {
-            dvc.song = filteredSongs[indexPath.row]
-            print(dvc.song)
-        } else {
-            dvc.song = songs[indexPath.row]
-            print(dvc.song)
-        }
-//            title = dvc.artistName.text
-        dvc.modalPresentationStyle = .fullScreen
-        self.present(dvc, animated: true)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "toDetail", let indexPath = tableView.indexPathForSelectedRow {
+            let dvc = segue.destination as! DetailVC
+            if searching {
+                dvc.song = filteredSongs[indexPath.row]
+            } else {
+                dvc.song = songs[indexPath.row]
+            }   
         }
     }
     

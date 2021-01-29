@@ -9,7 +9,7 @@ import UIKit
 
 class DetailVC: UIViewController {
 
-    var song = Song(artistName: "", albumName: "", imageName: "", trackName: "")
+    var song: Song!
     
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var albumName: UILabel!
@@ -22,11 +22,10 @@ class DetailVC: UIViewController {
     }
     
     func setupUI(){
-        guard artistName.text == song.artistName,
-              albumName.text == song.albumName,
-              trackName.text == song.trackName,
-              image.image == UIImage(named: song.imageName)
-        else { return }
+        artistName.text = song.artistName
+        albumName.text = song.albumName
+        trackName.text = song.trackName
+        image.image = UIImage(named: song.imageName)
     }
     
     @IBAction func doneTapped(_ sender: UIButton) {

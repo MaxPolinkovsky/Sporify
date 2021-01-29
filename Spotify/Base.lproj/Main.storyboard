@@ -255,6 +255,7 @@
                                             <outlet property="albumLabel" destination="EyZ-tK-srB" id="JK8-xW-bfV"/>
                                             <outlet property="artistLabel" destination="7N6-f9-vsp" id="uxn-eG-9k9"/>
                                             <outlet property="trackLabel" destination="r6a-wl-1Te" id="aO8-OM-IaK"/>
+                                            <segue destination="GNg-bW-00N" kind="presentation" identifier="toDetail" modalPresentationStyle="fullScreen" id="ERr-ab-lJB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -281,26 +282,19 @@
         <!--DetailVC-->
         <scene sceneID="jbp-q4-MW6">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GNg-bW-00N" customClass="DetailVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GNg-bW-00N" customClass="DetailVC" customModule="Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UDX-KX-zVy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="L7E-sl-9uM">
-                                <rect key="frame" x="58" y="144" width="298" height="298"/>
+                                <rect key="frame" x="58" y="172" width="298" height="298"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="L7E-sl-9uM" secondAttribute="height" multiplier="1:1" id="ayG-rZ-mXs"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lam-JE-Aex">
-                                <rect key="frame" x="20" y="75" width="30" height="30"/>
-                                <connections>
-                                    <action selector="doneTapped:" destination="GNg-bW-00N" eventType="touchUpInside" id="5vh-hO-EGS"/>
-                                    <action selector="doneTapped:" destination="6EJ-DX-wya" eventType="touchUpInside" id="zRC-UG-us3"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="V2G-Ua-Qeb">
-                                <rect key="frame" x="20" y="482" width="374" height="127.5"/>
+                                <rect key="frame" x="20" y="498" width="374" height="127.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foc-3K-oV5">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
@@ -322,18 +316,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lam-JE-Aex">
+                                <rect key="frame" x="20" y="64" width="30" height="30"/>
+                                <connections>
+                                    <action selector="doneTapped:" destination="GNg-bW-00N" eventType="touchUpInside" id="5vh-hO-EGS"/>
+                                    <action selector="doneTapped:" destination="6EJ-DX-wya" eventType="touchUpInside" id="zRC-UG-us3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YAi-Ay-GhY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YAi-Ay-GhY" firstAttribute="trailing" secondItem="L7E-sl-9uM" secondAttribute="trailing" constant="58" id="6GQ-EQ-y57"/>
-                            <constraint firstItem="V2G-Ua-Qeb" firstAttribute="top" secondItem="L7E-sl-9uM" secondAttribute="bottom" constant="40" id="IVJ-eD-W4x"/>
+                            <constraint firstItem="V2G-Ua-Qeb" firstAttribute="top" secondItem="L7E-sl-9uM" secondAttribute="bottom" constant="28" id="IVJ-eD-W4x"/>
                             <constraint firstItem="L7E-sl-9uM" firstAttribute="leading" secondItem="YAi-Ay-GhY" secondAttribute="leading" constant="58" id="W9x-s0-gpI"/>
-                            <constraint firstItem="L7E-sl-9uM" firstAttribute="top" secondItem="YAi-Ay-GhY" secondAttribute="top" constant="100" id="gIy-Bs-v0h"/>
+                            <constraint firstItem="L7E-sl-9uM" firstAttribute="top" secondItem="YAi-Ay-GhY" secondAttribute="top" constant="128" id="gIy-Bs-v0h"/>
                             <constraint firstItem="Lam-JE-Aex" firstAttribute="leading" secondItem="YAi-Ay-GhY" secondAttribute="leading" constant="20" id="hyW-tD-uhg"/>
                             <constraint firstItem="V2G-Ua-Qeb" firstAttribute="leading" secondItem="YAi-Ay-GhY" secondAttribute="leading" constant="20" id="tfq-8j-MCw"/>
                             <constraint firstItem="YAi-Ay-GhY" firstAttribute="trailing" secondItem="V2G-Ua-Qeb" secondAttribute="trailing" constant="20" id="wtw-cV-NKr"/>
-                            <constraint firstItem="Lam-JE-Aex" firstAttribute="top" secondItem="YAi-Ay-GhY" secondAttribute="top" constant="31" id="y3N-H1-9gs"/>
+                            <constraint firstItem="Lam-JE-Aex" firstAttribute="top" secondItem="YAi-Ay-GhY" secondAttribute="top" constant="20" id="y3N-H1-9gs"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
