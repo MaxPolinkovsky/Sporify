@@ -8,9 +8,9 @@
 import Foundation
 
 
-class Manager {
+class SPTManager {
     
-    static let shared = Manager()
+    static let shared = SPTManager()
     
     var configuration: SPTConfiguration = {
         let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)

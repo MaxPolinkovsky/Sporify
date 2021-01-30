@@ -11,7 +11,7 @@ class TracksVC: UIViewController {
     
     //https://johncodeos.com/how-to-add-search-in-uitableview-using-swift/
     
-    let songs = Manager.shared.songs
+    let songs = SPTManager.shared.songs
     var filteredSongs: [Song] = []
     var searching = false
     

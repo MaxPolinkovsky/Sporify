@@ -9,11 +9,18 @@ import UIKit
 
 class UserProfileVC: UIViewController {
 
-    @IBOutlet weak var userNameLabel: UILabel!
+    private lazy var userNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font.withSize(24)
+        label.textAlignment = .center
+        label.text = "UserName"
+        return label
+    }()
 
     private let imagePickerController = UIImagePickerController()
     
-    private let iconImageView: UIImageView = {
+    private lazy var iconImageView: UIImageView = {
         let image = UIImageView(image: UIImage(named: "account"))
         image.translatesAutoresizingMaskIntoConstraints = false
         image.isUserInteractionEnabled = true
@@ -63,6 +70,7 @@ extension UserProfileVC {
     
     func addSubView() {
         view.addSubview(iconImageView)
+        view.addSubview(userNameLabel)
     }
     
     func makeConstraints() {
@@ -70,7 +78,11 @@ extension UserProfileVC {
             iconImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             iconImageView.heightAnchor.constraint(equalToConstant: 80),
-            iconImageView.widthAnchor.constraint(equalToConstant: 80)
+            iconImageView.widthAnchor.constraint(equalToConstant: 80),
+            userNameLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 40),
+            userNameLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+            userNameLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
+            userNameLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }
