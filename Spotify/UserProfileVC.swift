@@ -36,6 +36,7 @@ class UserProfileVC: UIViewController {
         addSubView()
         makeConstraints()
         iconViewConfigurate()
+        updateColors()
     }
     
     // MARK: ImagePicker sourcetype
@@ -53,6 +54,10 @@ class UserProfileVC: UIViewController {
     
     @objc private func iconTap() {
         addUsersPhoto()
+    }
+
+    func updateColors() {
+        userNameLabel.textColor = RCValues.shared.color(forKey: .azureColor)
     }
 }
 

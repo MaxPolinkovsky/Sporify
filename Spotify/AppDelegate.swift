@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
    
     public var accessToken = ""
     
-    lazy var configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
+    lazy var configuration = SPTConfiguration(clientID: spotifyClientID, redirectURL: spotifyRedirectURL)
     
     lazy var appRemote: SPTAppRemote = {
-        let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
+        let configuration = SPTConfiguration(clientID: spotifyClientID, redirectURL: spotifyRedirectURL)
         let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
         appRemote.connectionParameters.accessToken = self.accessToken
         appRemote.delegate = self
@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        _ = RCValues .shared //Подчеркивание означает, что вы не планируете использовать имя константы. Просто получив доступ к значению shared, вы инициализируете его и заполняете его значения по умолчанию.
         return true
     }
 

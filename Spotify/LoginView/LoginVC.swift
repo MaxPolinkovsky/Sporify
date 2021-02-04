@@ -23,11 +23,12 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        updateColors()
     }
     func setupUI(){
         loginButton.layer.cornerRadius = 20
-        loginButton.backgroundColor = .azure
-        loginButton.tintColor = .white
+//        loginButton.backgroundColor = .azure
+//        loginButton.tintColor = .white
         createAccountButton.tintColor = .azure
         FirebaseManager.shared.downloadImagesFromFB(imageView: logoImage)
     }
@@ -47,6 +48,10 @@ class LoginVC: UIViewController {
 
     }
     
+    func updateColors() {
+        loginButton.backgroundColor = RCValues.shared.color(forKey: .azureColor)
+        loginButton.tintColor = RCValues.shared.color(forKey: .whiteColor)
+    }
     
 }
 

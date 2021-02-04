@@ -19,6 +19,7 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        updateColors()
     }
     
     func setupUI(){
@@ -26,6 +27,13 @@ class DetailVC: UIViewController {
         albumName.text = song.albumName
         trackName.text = song.trackName
         image.image = UIImage(named: song.imageName)
+    }
+    
+    func updateColors() {
+        artistName.textColor = RCValues.shared.color(forKey: .azureColor)
+        albumName.textColor = RCValues.shared.color(forKey: .azureColor)
+        trackName.textColor = RCValues.shared.color(forKey: .azureColor)
+        
     }
     
     @IBAction func doneTapped(_ sender: UIButton) {

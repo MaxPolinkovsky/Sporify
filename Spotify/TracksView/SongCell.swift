@@ -16,9 +16,17 @@ class SongCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        updateColors()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func updateColors() {
+        artistLabel.textColor = RCValues.shared.color(forKey: .azureColor)
+        albumLabel.textColor = RCValues.shared.color(forKey: .azureColor)
+        trackLabel.textColor = RCValues.shared.color(forKey: .azureColor)
+        
     }
 }
