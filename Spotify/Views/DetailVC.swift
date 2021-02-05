@@ -23,10 +23,10 @@ class DetailVC: UIViewController {
     }
     
     func setupUI(){
-        artistName.text = song.artistName
-        albumName.text = song.albumName
-        trackName.text = song.trackName
-        image.image = UIImage(named: song.imageName)
+        artistName.text = song.artistName ?? ""
+        albumName.text = song.albumName ?? ""
+        trackName.text = song.trackName ?? "" 
+        image.image = UIImage(named: song.imageName ?? "person.circle")
     }
     
     func updateColors() {

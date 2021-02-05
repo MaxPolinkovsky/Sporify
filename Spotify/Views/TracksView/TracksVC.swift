@@ -50,6 +50,9 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = self.tableView.dequeueReusableCell(withIdentifier: cellID) as! SongCell
+        cell.albumLabel.adjustsFontSizeToFitWidth = true
+        cell.trackLabel.adjustsFontSizeToFitWidth = true
+        cell.artistLabel.adjustsFontSizeToFitWidth = true
         isFiltred(indexPath, cell)
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -69,16 +72,17 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
     fileprivate func isFiltred(_ indexPath: IndexPath, _ cell: SongCell) {
         if searching {
             let filteredSong = filteredSongs[indexPath.row]
-            cell.albumLabel.text = filteredSong.albumName
-            cell.albumImage.image = UIImage(named: filteredSong.imageName)
-            cell.artistLabel.text = filteredSong.artistName
-            cell.trackLabel.text = filteredSong.trackName
+            cell.albumLabel.text = filteredSong.albumName ?? ""
+            cell.albumImage.image = UIImage(named: filteredSong.imageName ?? "person.circle")
+            cell.artistLabel.text = filteredSong.artistName ?? ""
+            cell.trackLabel.text = filteredSong.trackName ?? ""
+            
         } else {
             let song = songs[indexPath.row]
-            cell.albumLabel.text = song.albumName
-            cell.albumImage.image = UIImage(named: song.imageName)
-            cell.artistLabel.text = song.artistName
-            cell.trackLabel.text = song.trackName
+            cell.albumLabel.text = song.albumName ?? ""
+            cell.albumImage.image = UIImage(named: song.imageName ?? "person.circle")
+            cell.artistLabel.text = song.artistName ?? ""
+            cell.trackLabel.text = song.trackName ?? ""
         }
     }
 }
@@ -86,8 +90,8 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
 extension TracksVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredSongs = songs.filter { $0.artistName.lowercased().prefix(searchText.count) == searchText.lowercased() ||
-            $0.albumName.lowercased().prefix(searchText.count) == searchText.lowercased() || $0.trackName.lowercased().prefix(searchText.count) == searchText.lowercased()
+        filteredSongs = songs.filter { $0.artistName!.lowercased().prefix(searchText.count) == searchText.lowercased() ||
+            $0.albumName!.lowercased().prefix(searchText.count) == searchText.lowercased() || $0.trackName!.lowercased().prefix(searchText.count) == searchText.lowercased()
         }
         searching = true
         tableView.reloadData()

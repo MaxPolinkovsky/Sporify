@@ -12,6 +12,9 @@
 		84139AEF25BD6E380011379F /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139AEE25BD6E380011379F /* UserProfileVC.swift */; };
 		84139B1625BDA5D00011379F /* ModelSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1525BDA5D00011379F /* ModelSong.swift */; };
 		84139B1A25BDA6510011379F /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1925BDA6510011379F /* SongCell.swift */; };
+		8483C6B325CD5BBA0037A013 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8483C6B225CD5BBA0037A013 /* Realm */; };
+		8483C6B525CD5BBA0037A013 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8483C6B425CD5BBA0037A013 /* RealmSwift */; };
+		8483C6B825CD5CF70037A013 /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C6B725CD5CF70037A013 /* ModelUser.swift */; };
 		849B0B3625BA1A4500B3C453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3525BA1A4500B3C453 /* AppDelegate.swift */; };
 		849B0B3825BA1A4500B3C453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3725BA1A4500B3C453 /* SceneDelegate.swift */; };
 		849B0B3A25BA1A4500B3C453 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3925BA1A4500B3C453 /* LoginVC.swift */; };
@@ -21,11 +24,11 @@
 		849B0B4D25BC537100B3C453 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B0B4C25BC537100B3C453 /* SpotifyiOS.framework */; };
 		849B0B5F25BC612A00B3C453 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B5E25BC612A00B3C453 /* Constants.swift */; };
 		849B0B7425BC75A200B3C453 /* SPTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B7325BC75A200B3C453 /* SPTManager.swift */; };
-		84A1D8FA25CA8AE5000D2D9A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8F925CA8AE5000D2D9A /* SwiftPackageProductDependency */; };
-		84A1D8FC25CA8AE5000D2D9A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FB25CA8AE5000D2D9A /* SwiftPackageProductDependency */; };
-		84A1D8FE25CA8AE5000D2D9A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FD25CA8AE5000D2D9A /* SwiftPackageProductDependency */; };
-		84A1D90025CA8AE5000D2D9A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FF25CA8AE5000D2D9A /* SwiftPackageProductDependency */; };
-		84A1D90225CA8AE5000D2D9A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D90125CA8AE5000D2D9A /* SwiftPackageProductDependency */; };
+		84A1D8FA25CA8AE5000D2D9A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8F925CA8AE5000D2D9A /* FirebaseAnalytics */; };
+		84A1D8FC25CA8AE5000D2D9A /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FB25CA8AE5000D2D9A /* FirebaseRemoteConfig */; };
+		84A1D8FE25CA8AE5000D2D9A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FD25CA8AE5000D2D9A /* FirebaseStorage */; };
+		84A1D90025CA8AE5000D2D9A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D8FF25CA8AE5000D2D9A /* FirebaseAuth */; };
+		84A1D90225CA8AE5000D2D9A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D90125CA8AE5000D2D9A /* FirebaseDatabase */; };
 		84A1D91325CA9387000D2D9A /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D91225CA9387000D2D9A /* RCValues.swift */; };
 		84BE1EB425C1B6DF00CC7554 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */; };
 		84EFED5925C439A100B66D0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EFED5825C439A100B66D0B /* GoogleService-Info.plist */; };
@@ -38,6 +41,7 @@
 		84139AEE25BD6E380011379F /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		84139B1525BDA5D00011379F /* ModelSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSong.swift; sourceTree = "<group>"; };
 		84139B1925BDA6510011379F /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		8483C6B725CD5CF70037A013 /* ModelUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUser.swift; sourceTree = "<group>"; };
 		849B0B3225BA1A4500B3C453 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B0B3525BA1A4500B3C453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849B0B3725BA1A4500B3C453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +65,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A1D90225CA8AE5000D2D9A /* BuildFile in Frameworks */,
-				84A1D8FC25CA8AE5000D2D9A /* BuildFile in Frameworks */,
-				84A1D90025CA8AE5000D2D9A /* BuildFile in Frameworks */,
-				84A1D8FE25CA8AE5000D2D9A /* BuildFile in Frameworks */,
-				84A1D8FA25CA8AE5000D2D9A /* BuildFile in Frameworks */,
+				8483C6B525CD5BBA0037A013 /* RealmSwift in Frameworks */,
+				8483C6B325CD5BBA0037A013 /* Realm in Frameworks */,
+				84A1D90225CA8AE5000D2D9A /* FirebaseDatabase in Frameworks */,
+				84A1D8FC25CA8AE5000D2D9A /* FirebaseRemoteConfig in Frameworks */,
+				84A1D90025CA8AE5000D2D9A /* FirebaseAuth in Frameworks */,
+				84A1D8FE25CA8AE5000D2D9A /* FirebaseStorage in Frameworks */,
+				84A1D8FA25CA8AE5000D2D9A /* FirebaseAnalytics in Frameworks */,
 				849B0B4D25BC537100B3C453 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,16 +92,21 @@
 			isa = PBXGroup;
 			children = (
 				84139B1525BDA5D00011379F /* ModelSong.swift */,
+				8483C6B725CD5CF70037A013 /* ModelUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		84139B1F25BDA6C00011379F /* LoginView */ = {
+		84139B1F25BDA6C00011379F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84139AE125BD6A050011379F /* StartVC.swift */,
 				849B0B3925BA1A4500B3C453 /* LoginVC.swift */,
+				84139B1C25BDA6820011379F /* TracksView */,
+				84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */,
+				84139AEE25BD6E380011379F /* UserProfileVC.swift */,
 			);
-			path = LoginView;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		849B0B2925BA1A4500B3C453 = {
@@ -117,15 +128,11 @@
 		849B0B3425BA1A4500B3C453 /* Spotify */ = {
 			isa = PBXGroup;
 			children = (
-				849B0B5E25BC612A00B3C453 /* Constants.swift */,
-				84EFED9225C44FCE00B66D0B /* Managers */,
 				849B0B3525BA1A4500B3C453 /* AppDelegate.swift */,
 				849B0B3725BA1A4500B3C453 /* SceneDelegate.swift */,
-				84139B1F25BDA6C00011379F /* LoginView */,
-				84139AE125BD6A050011379F /* StartVC.swift */,
-				84139AEE25BD6E380011379F /* UserProfileVC.swift */,
-				84139B1C25BDA6820011379F /* TracksView */,
-				84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */,
+				849B0B5E25BC612A00B3C453 /* Constants.swift */,
+				84EFED9225C44FCE00B66D0B /* Managers */,
+				84139B1F25BDA6C00011379F /* Views */,
 				84139B1D25BDA69F0011379F /* Models */,
 				849B0B6625BC6D3400B3C453 /* mySpotify-Bridging-Header.h */,
 				849B0B3B25BA1A4500B3C453 /* Main.storyboard */,
@@ -165,11 +172,13 @@
 			);
 			name = Spotify;
 			packageProductDependencies = (
-				84A1D8F925CA8AE5000D2D9A /* SwiftPackageProductDependency */,
-				84A1D8FB25CA8AE5000D2D9A /* SwiftPackageProductDependency */,
-				84A1D8FD25CA8AE5000D2D9A /* SwiftPackageProductDependency */,
-				84A1D8FF25CA8AE5000D2D9A /* SwiftPackageProductDependency */,
-				84A1D90125CA8AE5000D2D9A /* SwiftPackageProductDependency */,
+				84A1D8F925CA8AE5000D2D9A /* FirebaseAnalytics */,
+				84A1D8FB25CA8AE5000D2D9A /* FirebaseRemoteConfig */,
+				84A1D8FD25CA8AE5000D2D9A /* FirebaseStorage */,
+				84A1D8FF25CA8AE5000D2D9A /* FirebaseAuth */,
+				84A1D90125CA8AE5000D2D9A /* FirebaseDatabase */,
+				8483C6B225CD5BBA0037A013 /* Realm */,
+				8483C6B425CD5BBA0037A013 /* RealmSwift */,
 			);
 			productName = Sporify;
 			productReference = 849B0B3225BA1A4500B3C453 /* Spotify.app */;
@@ -199,7 +208,8 @@
 			);
 			mainGroup = 849B0B2925BA1A4500B3C453;
 			packageReferences = (
-				84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */,
+				84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8483C6B125CD5BBA0037A013 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 849B0B3325BA1A4500B3C453 /* Products */;
 			projectDirPath = "";
@@ -240,6 +250,7 @@
 				84139B1625BDA5D00011379F /* ModelSong.swift in Sources */,
 				84139AEB25BD6DC10011379F /* TracksVC.swift in Sources */,
 				849B0B7425BC75A200B3C453 /* SPTManager.swift in Sources */,
+				8483C6B825CD5CF70037A013 /* ModelUser.swift in Sources */,
 				84139B1A25BDA6510011379F /* SongCell.swift in Sources */,
 				84139AE225BD6A050011379F /* StartVC.swift in Sources */,
 			);
@@ -459,7 +470,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */ = {
+		8483C6B125CD5BBA0037A013 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.1;
+			};
+		};
+		84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -470,29 +489,39 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		84A1D8F925CA8AE5000D2D9A /* SwiftPackageProductDependency */ = {
+		8483C6B225CD5BBA0037A013 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */;
+			package = 8483C6B125CD5BBA0037A013 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		8483C6B425CD5BBA0037A013 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8483C6B125CD5BBA0037A013 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		84A1D8F925CA8AE5000D2D9A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		84A1D8FB25CA8AE5000D2D9A /* SwiftPackageProductDependency */ = {
+		84A1D8FB25CA8AE5000D2D9A /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */;
+			package = 84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
 		};
-		84A1D8FD25CA8AE5000D2D9A /* SwiftPackageProductDependency */ = {
+		84A1D8FD25CA8AE5000D2D9A /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */;
+			package = 84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-		84A1D8FF25CA8AE5000D2D9A /* SwiftPackageProductDependency */ = {
+		84A1D8FF25CA8AE5000D2D9A /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */;
+			package = 84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		84A1D90125CA8AE5000D2D9A /* SwiftPackageProductDependency */ = {
+		84A1D90125CA8AE5000D2D9A /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84A1D8F825CA8AE5000D2D9A /* RemoteSwiftPackageReference */;
+			package = 84A1D8F825CA8AE5000D2D9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */

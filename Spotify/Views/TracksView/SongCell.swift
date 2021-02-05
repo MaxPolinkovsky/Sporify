@@ -16,7 +16,7 @@ class SongCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        updateColors()
+        updateColors()        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

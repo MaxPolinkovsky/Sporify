@@ -8,12 +8,13 @@
 import UIKit
 
 let cellID = "cell"
+
 //MARK: Spotify
 let spotifyClientID = "d085134cf36647f1ba3df971f6f2f631"
 let spotifyRedirectURL = URL(string:"mySporify://returnAfterLogin")!
 let userDefaults = UserDefaults.standard
 
-//MARK: Colors
+//MARK: HEXColors
 let azureColor = "#3F8FF7"
 let whiteColor = "#FFFFFF"
 
@@ -63,6 +64,7 @@ extension UIColor {
         return UIColor(white: 246.0 / 255.0, alpha: 1.0)
     }
 }
+
 //MARK: Convert a hex color to a UIColor
 //https://www.hackingwithswift.com/example-code/uicolor/how-to-convert-a-hex-color-to-a-uicolor
 extension UIColor {
