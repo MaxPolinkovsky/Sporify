@@ -18,14 +18,14 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         updateColors()
+        setupUI()
     }
-    
+
     func setupUI(){
         artistName.text = song.artistName ?? ""
         albumName.text = song.albumName ?? ""
-        trackName.text = song.trackName ?? "" 
+        trackName.text = song.trackName ?? ""
         image.image = UIImage(named: song.imageName ?? "person.circle")
     }
     

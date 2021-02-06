@@ -13,10 +13,10 @@ struct Song {
     let imageName: String?
     let trackName: String?
     
-    func initSongs() {
-        guard self.artistName != nil else {return}
-        guard self.albumName != nil else {return}
-        guard self.imageName != nil else {return}
-        guard self.trackName != nil else {return}
+    func initSong(song: Song) -> Song {
+        return Song(artistName: artistName ?? "",
+                    albumName: albumName ?? "",
+                    imageName: imageName ?? "",
+                    trackName: trackName ?? "")
     }
 }

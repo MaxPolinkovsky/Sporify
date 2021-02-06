@@ -12,6 +12,7 @@
 		84139AEF25BD6E380011379F /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139AEE25BD6E380011379F /* UserProfileVC.swift */; };
 		84139B1625BDA5D00011379F /* ModelSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1525BDA5D00011379F /* ModelSong.swift */; };
 		84139B1A25BDA6510011379F /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1925BDA6510011379F /* SongCell.swift */; };
+		8480557225CEFDE300705BE5 /* SongsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480557125CEFDE300705BE5 /* SongsManager.swift */; };
 		8483C6B325CD5BBA0037A013 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8483C6B225CD5BBA0037A013 /* Realm */; };
 		8483C6B525CD5BBA0037A013 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8483C6B425CD5BBA0037A013 /* RealmSwift */; };
 		8483C6B825CD5CF70037A013 /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C6B725CD5CF70037A013 /* ModelUser.swift */; };
@@ -31,8 +32,12 @@
 		84A1D90225CA8AE5000D2D9A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84A1D90125CA8AE5000D2D9A /* FirebaseDatabase */; };
 		84A1D91325CA9387000D2D9A /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D91225CA9387000D2D9A /* RCValues.swift */; };
 		84BE1EB425C1B6DF00CC7554 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */; };
+		84D6442B25CDCF9200283E57 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6442A25CDCF9200283E57 /* CoreDataManager.swift */; };
 		84EFED5925C439A100B66D0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EFED5825C439A100B66D0B /* GoogleService-Info.plist */; };
 		84EFED8D25C44E0900B66D0B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFED8C25C44E0900B66D0B /* FirebaseManager.swift */; };
+		84F6F65625CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F65425CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodeld */; };
+		84F6F65A25CECA3F003A1AAB /* SongEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F65825CECA3F003A1AAB /* SongEntity+CoreDataClass.swift */; };
+		84F6F65B25CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F65925CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,7 @@
 		84139AEE25BD6E380011379F /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		84139B1525BDA5D00011379F /* ModelSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSong.swift; sourceTree = "<group>"; };
 		84139B1925BDA6510011379F /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		8480557125CEFDE300705BE5 /* SongsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsManager.swift; sourceTree = "<group>"; };
 		8483C6B725CD5CF70037A013 /* ModelUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUser.swift; sourceTree = "<group>"; };
 		849B0B3225BA1A4500B3C453 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B0B3525BA1A4500B3C453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +62,12 @@
 		849B0B7325BC75A200B3C453 /* SPTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTManager.swift; sourceTree = "<group>"; };
 		84A1D91225CA9387000D2D9A /* RCValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		84D6442A25CDCF9200283E57 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		84EFED5825C439A100B66D0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84EFED8C25C44E0900B66D0B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		84F6F65525CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelCoreDataSong.xcdatamodel; sourceTree = "<group>"; };
+		84F6F65825CECA3F003A1AAB /* SongEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SongEntity+CoreDataClass.swift"; path = "Spotify/SongEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84F6F65925CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SongEntity+CoreDataProperties.swift"; path = "Spotify/SongEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 			children = (
 				84139B1525BDA5D00011379F /* ModelSong.swift */,
 				8483C6B725CD5CF70037A013 /* ModelUser.swift */,
+				84F6F65425CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +123,8 @@
 		849B0B2925BA1A4500B3C453 = {
 			isa = PBXGroup;
 			children = (
+				84F6F65825CECA3F003A1AAB /* SongEntity+CoreDataClass.swift */,
+				84F6F65925CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift */,
 				849B0B3425BA1A4500B3C453 /* Spotify */,
 				849B0B3325BA1A4500B3C453 /* Products */,
 			);
@@ -151,6 +164,8 @@
 				849B0B7325BC75A200B3C453 /* SPTManager.swift */,
 				84EFED8C25C44E0900B66D0B /* FirebaseManager.swift */,
 				84A1D91225CA9387000D2D9A /* RCValues.swift */,
+				84D6442A25CDCF9200283E57 /* CoreDataManager.swift */,
+				8480557125CEFDE300705BE5 /* SongsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -240,8 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EFED8D25C44E0900B66D0B /* FirebaseManager.swift in Sources */,
+				84F6F65625CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodeld in Sources */,
 				84139AEF25BD6E380011379F /* UserProfileVC.swift in Sources */,
 				84A1D91325CA9387000D2D9A /* RCValues.swift in Sources */,
+				84F6F65A25CECA3F003A1AAB /* SongEntity+CoreDataClass.swift in Sources */,
 				849B0B5F25BC612A00B3C453 /* Constants.swift in Sources */,
 				84BE1EB425C1B6DF00CC7554 /* DetailVC.swift in Sources */,
 				849B0B3A25BA1A4500B3C453 /* LoginVC.swift in Sources */,
@@ -250,8 +267,11 @@
 				84139B1625BDA5D00011379F /* ModelSong.swift in Sources */,
 				84139AEB25BD6DC10011379F /* TracksVC.swift in Sources */,
 				849B0B7425BC75A200B3C453 /* SPTManager.swift in Sources */,
+				84F6F65B25CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift in Sources */,
 				8483C6B825CD5CF70037A013 /* ModelUser.swift in Sources */,
 				84139B1A25BDA6510011379F /* SongCell.swift in Sources */,
+				84D6442B25CDCF9200283E57 /* CoreDataManager.swift in Sources */,
+				8480557225CEFDE300705BE5 /* SongsManager.swift in Sources */,
 				84139AE225BD6A050011379F /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +545,19 @@
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		84F6F65425CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F6F65525CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodel */,
+			);
+			currentVersion = 84F6F65525CEC9C5003A1AAB /* ModelCoreDataSong.xcdatamodel */;
+			path = ModelCoreDataSong.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 849B0B2A25BA1A4500B3C453 /* Project object */;
 }

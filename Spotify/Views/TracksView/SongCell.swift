@@ -29,4 +29,11 @@ class SongCell: UITableViewCell {
         trackLabel.textColor = RCValues.shared.color(forKey: .azureColor)
         
     }
+    
+    func setDataCell(song: Song) {
+        artistLabel.text = song.artistName
+        albumLabel.text = song.albumName
+        trackLabel.text = song.trackName
+        albumImage.image = UIImage(named: song.imageName ?? "person.circle")
+    }
 }

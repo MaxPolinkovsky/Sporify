@@ -12,6 +12,31 @@ class SPTManager: NSObject {
     
     static let shared = SPTManager()
     
+    var testSongs = [Song(artistName: "Rnado",
+                      albumName: "123 Other",
+                      imageName: "1",
+                      trackName: "song1"),
+                 Song(artistName: "Camilla Cabello",
+                      albumName: "Havana album",
+                      imageName: "3",
+                      trackName: "song2"),
+                 Song(artistName: "Coldplay",
+                      albumName: "123 Something",
+                      imageName: "2",
+                      trackName: "song3"),
+                 Song(artistName: "Rnado",
+                      albumName: "123 Other",
+                      imageName: "1",
+                      trackName: "song1"),
+                 Song(artistName: "Camilla Cabello",
+                      albumName: "Havana album",
+                      imageName: "3",
+                      trackName: "song2"),
+                 Song(artistName: "Coldplay",
+                      albumName: "123 Something",
+                      imageName: "2",
+                      trackName: "song3")]
+        
     var configuration: SPTConfiguration = {
         let configuration = SPTConfiguration(clientID: spotifyClientID, redirectURL: spotifyRedirectURL)
         //играет последний трек пользователя
@@ -79,31 +104,6 @@ class SPTManager: NSObject {
     static func isPlaying(track_id: String) -> Bool {
         return SPTManager.currentTrackId == track_id
     }
-    
-    var songs = [Song(artistName: "Rnado",
-                      albumName: "123 Other",
-                      imageName: "1",
-                      trackName: "song1"),
-                 Song(artistName: "Camilla Cabello",
-                      albumName: "Havana album",
-                      imageName: "3",
-                      trackName: "song2"),
-                 Song(artistName: "Coldplay",
-                      albumName: "123 Something",
-                      imageName: "2",
-                      trackName: "song3"),
-                 Song(artistName: "Rnado",
-                      albumName: "123 Other",
-                      imageName: "1",
-                      trackName: "song1"),
-                 Song(artistName: "Camilla Cabello",
-                      albumName: "Havana album",
-                      imageName: "3",
-                      trackName: "song2"),
-                 Song(artistName: "Coldplay",
-                      albumName: "123 Something",
-                      imageName: "2",
-                      trackName: "song3")]
 }
 
 extension SPTManager: SPTSessionManagerDelegate {

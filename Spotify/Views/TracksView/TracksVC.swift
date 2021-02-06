@@ -11,7 +11,9 @@ class TracksVC: UIViewController {
     
     //https://johncodeos.com/how-to-add-search-in-uitableview-using-swift/
     
-    let songs = SPTManager.shared.songs
+//    let songs = SPTManager.shared.songs
+//    let songs =  SongsManager.shared.requestData()
+    let songs =  SongsManager.shared.makeContext()
     var filteredSongs: [Song] = []
     var searching = false
     
@@ -34,7 +36,7 @@ class TracksVC: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()  
+        super.viewDidLoad()
     }
 }
 
@@ -72,17 +74,10 @@ extension TracksVC: UITableViewDataSource, UITableViewDelegate {
     fileprivate func isFiltred(_ indexPath: IndexPath, _ cell: SongCell) {
         if searching {
             let filteredSong = filteredSongs[indexPath.row]
-            cell.albumLabel.text = filteredSong.albumName ?? ""
-            cell.albumImage.image = UIImage(named: filteredSong.imageName ?? "person.circle")
-            cell.artistLabel.text = filteredSong.artistName ?? ""
-            cell.trackLabel.text = filteredSong.trackName ?? ""
-            
+            cell.setDataCell(song: filteredSong)
         } else {
             let song = songs[indexPath.row]
-            cell.albumLabel.text = song.albumName ?? ""
-            cell.albumImage.image = UIImage(named: song.imageName ?? "person.circle")
-            cell.artistLabel.text = song.artistName ?? ""
-            cell.trackLabel.text = song.trackName ?? ""
+            cell.setDataCell(song: song)
         }
     }
 }
