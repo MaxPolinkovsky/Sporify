@@ -56,8 +56,8 @@ class LoginVC: UIViewController {
                     do {
                         realm?.beginWrite()
                         user.name = text
+                        realm?.add(user)
                         try realm?.commitWrite()
-                        print("User: \(user.name)")
                         print(realm!.configuration.fileURL?.absoluteURL as Any)
                     } catch {
                         print(error.localizedDescription)
@@ -75,8 +75,7 @@ class LoginVC: UIViewController {
         }
         present(alert, animated: true, completion: nil) // Вызываем алёрт контроллер
     }
-    
-    
+
     func updateColors() {
         loginButton.backgroundColor = RCValues.shared.color(forKey: .azureColor)
         loginButton.tintColor = RCValues.shared.color(forKey: .whiteColor)
