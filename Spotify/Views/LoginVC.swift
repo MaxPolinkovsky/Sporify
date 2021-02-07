@@ -15,6 +15,7 @@ class LoginVC: UIViewController {
     
     //https://garretthughes3.medium.com/unlocking-the-powers-of-spotifys-sdk-with-ios-on-swift-5-5b18b0f1fa65
     
+    private let user = User()
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImage: UIImageView!
@@ -45,35 +46,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
-        let realm = try? Realm()
-        let user = User()
-        var alertTextField = UITextField()
-        let alert = UIAlertController(title: "Add user", message: nil, preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "Ok", style: .default) { action in
-            guard let text = alertTextField.text , !text.isEmpty else { return }
-            if user.name.isEmpty {
-                DispatchQueue.main.async {
-                    do {
-                        realm?.beginWrite()
-                        user.name = text
-                        realm?.add(user)
-                        try realm?.commitWrite()
-                        print(realm!.configuration.fileURL?.absoluteURL as Any)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
-        alert.addAction(saveAction)
-        
-        alert.addTextField { textField in
-            alertTextField = textField
-            alertTextField.placeholder = ""
-        }
-        present(alert, animated: true, completion: nil) // Вызываем алёрт контроллер
+        loginAlert(user: user)
     }
 
     func updateColors() {

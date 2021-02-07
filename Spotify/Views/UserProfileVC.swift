@@ -9,12 +9,14 @@ import UIKit
 
 class UserProfileVC: UIViewController {
 
+    var userName = ""
+    
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font.withSize(24)
         label.textAlignment = .center
-        label.text = "UserName"
+        label.text = userName
         return label
     }()
 
