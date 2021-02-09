@@ -11,7 +11,12 @@ import UIKit
 import Firebase
 import RealmSwift
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, SpotifyAccessListener {
+   
+    func accessGranted(accessToken: String) {
+        
+    }
+    
     
     //https://garretthughes3.medium.com/unlocking-the-powers-of-spotifys-sdk-with-ios-on-swift-5-5b18b0f1fa65
     
@@ -36,7 +41,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        SceneDelegate.shared().appRemote.authorizeAndPlayURI(playURI)
+        SpotifyManager.shared.delegate = self
+        SpotifyManager.shared.authorizeAndPlay(playURI: playURI)
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
