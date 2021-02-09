@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16B75A20-9692-42F4-B37A-B02B2BE855FC"
+            uuid = "FF25B2C8-198A-469D-91F4-0D3F376E4D50"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Spotify/Managers/SongsManager.swift"
+            filePath = "Spotify/SceneDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "makeContext()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "scene(_:openURLContexts:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D9DFBC0E-0B36-42FC-8CFC-46CEAFA91AA6"
+            uuid = "880FFF91-2B26-4E23-8303-09EF4A0EA923"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Spotify/Views/LoginAlert.swift"
+            filePath = "Spotify/SceneDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "loginAlert(user:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "scene(_:openURLContexts:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

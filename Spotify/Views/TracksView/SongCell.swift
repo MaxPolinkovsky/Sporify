@@ -27,7 +27,6 @@ class SongCell: UITableViewCell {
         artistLabel.textColor = RCValues.shared.color(forKey: .azureColor)
         albumLabel.textColor = RCValues.shared.color(forKey: .azureColor)
         trackLabel.textColor = RCValues.shared.color(forKey: .azureColor)
-        
     }
     
     func setDataCell(song: Song) {

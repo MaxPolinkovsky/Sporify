@@ -18,8 +18,7 @@ extension LoginVC {
                 RealmManager.writeTobase(text: text)
                 self.toUserProfileVC(name: text)
                 print(text)
-            }
-            
+            } 
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
@@ -39,6 +38,5 @@ extension LoginVC {
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true, completion: nil)
     }
-    
 }
 

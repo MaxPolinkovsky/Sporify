@@ -33,7 +33,6 @@ class DetailVC: UIViewController {
         artistName.textColor = RCValues.shared.color(forKey: .azureColor)
         albumName.textColor = RCValues.shared.color(forKey: .azureColor)
         trackName.textColor = RCValues.shared.color(forKey: .azureColor)
-        
     }
     
     @IBAction func doneTapped(_ sender: UIButton) {

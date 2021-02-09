@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
     //https://garretthughes3.medium.com/unlocking-the-powers-of-spotifys-sdk-with-ios-on-swift-5-5b18b0f1fa65
     
     private let user = User()
+    private let playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImage: UIImageView!
@@ -35,14 +36,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        //        FirebaseManager.shared.firebaseAuth()
-        
-        let playURI = SPTManager.shared.configuration.playURI!
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let appRemote = appDelegate.appRemote
-        appRemote.authorizeAndPlayURI(playURI)
-        
-        print("Answer: \(appDelegate.accessToken)")
+        SceneDelegate.shared().appRemote.authorizeAndPlayURI(playURI)
     }
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
@@ -53,6 +47,5 @@ class LoginVC: UIViewController {
         loginButton.backgroundColor = RCValues.shared.color(forKey: .azureColor)
         loginButton.tintColor = RCValues.shared.color(forKey: .whiteColor)
     }
-    
 }
 

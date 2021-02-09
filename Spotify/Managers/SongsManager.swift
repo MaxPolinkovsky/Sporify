@@ -15,15 +15,14 @@ class SongsManager {
     
     //создание сущности
     func makeContext() -> [Song]{
-        if let context = CoreDataManager.shared.managedContext, let entity = NSEntityDescription.entity(forEntityName: SongEntity.entityID, in: context){
-                let modelSong = SongEntity(entity: entity, insertInto: context)
-            var songsEntity = [modelSong.initSong()]
+        if let context = CoreDataManager.shared.managedContext, let _ = NSEntityDescription.entity(forEntityName: SongEntity.entityID, in: context){
+//                let modelSong = SongEntity(entity: entity, insertInto: context)
+            var songsEntity = [Song]()
             
             for song in songs {
                 songsEntity.append(song)
             }
                 do {
-                    print(songsEntity)
                     try context.save()
                 } catch  {
                     context.rollback()
