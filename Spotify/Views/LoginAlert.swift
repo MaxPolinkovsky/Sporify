@@ -35,7 +35,7 @@ extension LoginVC {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let dvc = storyboard.instantiateViewController(identifier: "UserProfileVC") as? UserProfileVC else { return }
         dvc.userName = name
-        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalPresentationStyle = .popover
         self.present(dvc, animated: true, completion: nil)
     }
 }
