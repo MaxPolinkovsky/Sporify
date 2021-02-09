@@ -9,14 +9,14 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
     
-    static func shared() -> SceneDelegate {
-        let scene = UIApplication.shared.connectedScenes.first
-        let sceneDelegate: SceneDelegate = ((scene?.delegate as? SceneDelegate)!)
-        return sceneDelegate
-    }
-    
     var accessToken = ""
     
+//    static func shared() -> SceneDelegate {
+//        let scene = UIApplication.shared.connectedScenes.first
+//        let sceneDelegate: SceneDelegate = ((scene?.delegate as? SceneDelegate)!)
+//        return sceneDelegate
+//    }
+//    
     var window: UIWindow?
     
     lazy var configuration:  SPTConfiguration = {
@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
     }()
 
     lazy var appRemote: SPTAppRemote = {
-        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+        let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
         appRemote.connectionParameters.accessToken = self.accessToken
         appRemote.delegate = self
         return appRemote

@@ -12,7 +12,7 @@ let userDefaults = UserDefaults.standard
 
 //MARK: Spotify
 let spotifyClientID = "d085134cf36647f1ba3df971f6f2f631"
-let spotifyRedirectURL = URL(string:"mySporify://returnAfterLogin")!
+let spotifyRedirectURL = URL(string:"MySporify://returnAfterLogin")!
 
 //MARK: HEXColors
 let azureColor = "#3F8FF7"

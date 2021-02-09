@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>mySpotify</string>
+	<string>MySpotify</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,11 +21,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>de.mahus.mySpotify</string>
+			<string>de.mahus.MySpotify</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>myspotify</string>
+				<string>MySpotify</string>
 				<string>mySpotify</string>
 			</array>
 		</dict>

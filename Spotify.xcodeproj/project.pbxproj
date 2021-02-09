@@ -12,9 +12,9 @@
 		84139AEF25BD6E380011379F /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139AEE25BD6E380011379F /* UserProfileVC.swift */; };
 		84139B1625BDA5D00011379F /* ModelSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1525BDA5D00011379F /* ModelSong.swift */; };
 		84139B1A25BDA6510011379F /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1925BDA6510011379F /* SongCell.swift */; };
+		846771E325D2D5C3003C2A6A /* ExtensionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846771E225D2D5C3003C2A6A /* ExtensionTableView.swift */; };
 		847A2FD425D27D2F00E7FDB5 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A2FD325D27D2F00E7FDB5 /* ExtensionUIColor.swift */; };
 		847A2FD925D27DAF00E7FDB5 /* ExtensionUISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A2FD825D27DAF00E7FDB5 /* ExtensionUISearchBarDelegate.swift */; };
-		847A2FDD25D27E0200E7FDB5 /* ExtensionUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A2FDC25D27E0200E7FDB5 /* ExtensionUITableView.swift */; };
 		847A2FE025D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A2FDF25D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift */; };
 		8480557225CEFDE300705BE5 /* SongsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480557125CEFDE300705BE5 /* SongsManager.swift */; };
 		8480557925CFDDC800705BE5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480557825CFDDC800705BE5 /* RealmManager.swift */; };
@@ -52,9 +52,9 @@
 		84139AEE25BD6E380011379F /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		84139B1525BDA5D00011379F /* ModelSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSong.swift; sourceTree = "<group>"; };
 		84139B1925BDA6510011379F /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		846771E225D2D5C3003C2A6A /* ExtensionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTableView.swift; sourceTree = "<group>"; };
 		847A2FD325D27D2F00E7FDB5 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		847A2FD825D27DAF00E7FDB5 /* ExtensionUISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUISearchBarDelegate.swift; sourceTree = "<group>"; };
-		847A2FDC25D27E0200E7FDB5 /* ExtensionUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITableView.swift; sourceTree = "<group>"; };
 		847A2FDF25D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImagePicker.swift; sourceTree = "<group>"; };
 		8480557125CEFDE300705BE5 /* SongsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsManager.swift; sourceTree = "<group>"; };
 		8480557825CFDDC800705BE5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		849B0B4325BA1A4B00B3C453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B0B4C25BC537100B3C453 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		849B0B5E25BC612A00B3C453 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		849B0B6625BC6D3400B3C453 /* mySpotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mySpotify-Bridging-Header.h"; sourceTree = "<group>"; };
+		849B0B6625BC6D3400B3C453 /* MySpotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySpotify-Bridging-Header.h"; sourceTree = "<group>"; };
 		849B0B7325BC75A200B3C453 /* SPTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTManager.swift; sourceTree = "<group>"; };
 		84A1D91225CA9387000D2D9A /* RCValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		84BE1EB325C1B6DF00CC7554 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 			children = (
 				847A2FD325D27D2F00E7FDB5 /* ExtensionUIColor.swift */,
 				847A2FD825D27DAF00E7FDB5 /* ExtensionUISearchBarDelegate.swift */,
-				847A2FDC25D27E0200E7FDB5 /* ExtensionUITableView.swift */,
 				847A2FDF25D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift */,
+				846771E225D2D5C3003C2A6A /* ExtensionTableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 				84139B1F25BDA6C00011379F /* Views */,
 				84139B1D25BDA69F0011379F /* Models */,
 				847A2FD625D27D5C00E7FDB5 /* Extensions */,
-				849B0B6625BC6D3400B3C453 /* mySpotify-Bridging-Header.h */,
+				849B0B6625BC6D3400B3C453 /* MySpotify-Bridging-Header.h */,
 				849B0B3B25BA1A4500B3C453 /* Main.storyboard */,
 				849B0B3E25BA1A4B00B3C453 /* Assets.xcassets */,
 				849B0B4025BA1A4B00B3C453 /* LaunchScreen.storyboard */,
@@ -288,11 +288,11 @@
 				849B0B5F25BC612A00B3C453 /* Constants.swift in Sources */,
 				84BE1EB425C1B6DF00CC7554 /* DetailVC.swift in Sources */,
 				849B0B3A25BA1A4500B3C453 /* LoginVC.swift in Sources */,
+				846771E325D2D5C3003C2A6A /* ExtensionTableView.swift in Sources */,
 				849B0B3625BA1A4500B3C453 /* AppDelegate.swift in Sources */,
 				849B0B3825BA1A4500B3C453 /* SceneDelegate.swift in Sources */,
 				847A2FE025D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift in Sources */,
 				84139B1625BDA5D00011379F /* ModelSong.swift in Sources */,
-				847A2FDD25D27E0200E7FDB5 /* ExtensionUITableView.swift in Sources */,
 				84139AEB25BD6DC10011379F /* TracksVC.swift in Sources */,
 				849B0B7425BC75A200B3C453 /* SPTManager.swift in Sources */,
 				84F6F65B25CECA3F003A1AAB /* SongEntity+CoreDataProperties.swift in Sources */,
@@ -464,9 +464,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = de.mahus.mySpotify;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mahus.MySpotify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/mySpotify-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/MySpotify-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -490,9 +490,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = de.mahus.mySpotify;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mahus.MySpotify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/mySpotify-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/MySpotify-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
