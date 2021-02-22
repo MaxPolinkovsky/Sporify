@@ -8,18 +8,22 @@
 import Foundation
 import RealmSwift
 
-var realm = try! Realm()
+
 
 class RealmManager {
-
-   static func writeTobase(text: String) {
+    
+    private lazy var realm = try! Realm()
+    
+    static let shared = RealmManager()
+    
+    func writeTobase(text: String) {
         let user = User()
         DispatchQueue.main.async {
             do {
-                realm.beginWrite()
+                self.realm.beginWrite()
                 user.name = text
-                realm.add(user)
-                try realm.commitWrite()
+                self.realm.add(user)
+                try self.realm.commitWrite()
             } catch {
                 print(error.localizedDescription)
             }

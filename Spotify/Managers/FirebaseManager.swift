@@ -28,13 +28,26 @@ class FirebaseManager {
 //        }
 //    }
     
-    func downloadImagesFromFB(imageView: UIImageView){
+//    func downloadImagesFromFB(imageView: UIImage){
+//        let ref = storage.reference().child("Images/logo.png")
+//        ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
+//            if error != nil {
+//                print("Error: Image could not download!")
+//            } else {
+//                imageView = UIImage(data: data!)
+//            }
+//        }
+//    }
+    
+    func downloadImagesFromFB(success: @escaping(UIImage) -> Void){
+        
         let ref = storage.reference().child("Images/logo.png")
-        ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
+        ref.getData(maxSize: 1 * 1024 * 1024) { image, error in
+            guard let image = image else {return}
             if error != nil {
-                print("Error: Image could not download!")
+                print(error!.localizedDescription)
             } else {
-                imageView.image = UIImage(data: data!)
+                success(UIImage(data: image)!)
             }
         }
     }

@@ -12,6 +12,7 @@
 		84139AEF25BD6E380011379F /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139AEE25BD6E380011379F /* UserProfileVC.swift */; };
 		84139B1625BDA5D00011379F /* ModelSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1525BDA5D00011379F /* ModelSong.swift */; };
 		84139B1A25BDA6510011379F /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84139B1925BDA6510011379F /* SongCell.swift */; };
+		842672A325E4314400AA5ED6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3925BA1A4500B3C453 /* LoginVC.swift */; };
 		846771E325D2D5C3003C2A6A /* ExtensionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846771E225D2D5C3003C2A6A /* ExtensionTableView.swift */; };
 		846771EB25D2E433003C2A6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846771EA25D2E433003C2A6A /* GoogleService-Info.plist */; };
 		847A2FD425D27D2F00E7FDB5 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A2FD325D27D2F00E7FDB5 /* ExtensionUIColor.swift */; };
@@ -25,7 +26,6 @@
 		8483C6B825CD5CF70037A013 /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C6B725CD5CF70037A013 /* ModelUser.swift */; };
 		849B0B3625BA1A4500B3C453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3525BA1A4500B3C453 /* AppDelegate.swift */; };
 		849B0B3825BA1A4500B3C453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3725BA1A4500B3C453 /* SceneDelegate.swift */; };
-		849B0B3A25BA1A4500B3C453 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B3925BA1A4500B3C453 /* LoginVC.swift */; };
 		849B0B3D25BA1A4500B3C453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B0B3B25BA1A4500B3C453 /* Main.storyboard */; };
 		849B0B3F25BA1A4B00B3C453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B0B3E25BA1A4B00B3C453 /* Assets.xcassets */; };
 		849B0B4225BA1A4B00B3C453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B0B4025BA1A4B00B3C453 /* LaunchScreen.storyboard */; };
@@ -287,9 +287,9 @@
 				84F6F65A25CECA3F003A1AAB /* SongEntity+CoreDataClass.swift in Sources */,
 				849B0B5F25BC612A00B3C453 /* Constants.swift in Sources */,
 				84BE1EB425C1B6DF00CC7554 /* DetailVC.swift in Sources */,
-				849B0B3A25BA1A4500B3C453 /* LoginVC.swift in Sources */,
 				846771E325D2D5C3003C2A6A /* ExtensionTableView.swift in Sources */,
 				849B0B3625BA1A4500B3C453 /* AppDelegate.swift in Sources */,
+				842672A325E4314400AA5ED6 /* LoginVC.swift in Sources */,
 				849B0B3825BA1A4500B3C453 /* SceneDelegate.swift in Sources */,
 				847A2FE025D27E4F00E7FDB5 /* ExtensionUIImagePicker.swift in Sources */,
 				84139B1625BDA5D00011379F /* ModelSong.swift in Sources */,

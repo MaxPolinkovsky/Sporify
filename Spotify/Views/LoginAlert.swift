@@ -15,7 +15,7 @@ extension LoginVC {
         let saveAction = UIAlertAction(title: "Ok", style: .default) { action in
             guard let text = alertTextField.text , !text.isEmpty else { return }
             if user.name.isEmpty {
-                RealmManager.writeTobase(text: text)
+                RealmManager.shared.writeTobase(text: text)
                 self.toUserProfileVC(name: text)
                 print(text)
             } 

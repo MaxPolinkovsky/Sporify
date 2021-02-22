@@ -32,7 +32,9 @@ class LoginVC: UIViewController {
         //        loginButton.backgroundColor = .azure
         //        loginButton.tintColor = .white
         createAccountButton.tintColor = .azure
-        FirebaseManager.shared.downloadImagesFromFB(imageView: logoImage)
+        FirebaseManager.shared.downloadImagesFromFB { (image) in
+            self.logoImage.image = image
+        }
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
