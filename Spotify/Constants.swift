@@ -11,8 +11,19 @@ let cellID = "cell"
 let userDefaults = UserDefaults.standard
 
 //MARK: Spotify
-let spotifyClientID = "d085134cf36647f1ba3df971f6f2f631"
-let spotifyRedirectURL = URL(string:"MySporify://returnAfterLogin")!
+let playURI = "spotify:artist:3W4xM5XYtUp4ifYYPVKVdk"
+let SpotifyClientID = "d085134cf36647f1ba3df971f6f2f631"
+let SpotifyRedirectURL = URL(string: "MySporify://returnAfterLogin")!
+var accessToken = ""
+let userDafault = UserDefaults.standard
+let tokenKey = "tokenKey"
+let spotify = SPTManager.shared
+var appRemote: SPTAppRemote? {
+    get {
+        return spotify.appRemote
+    }
+}
+
 
 //MARK: HEXColors
 let azureColor = "#3F8FF7"

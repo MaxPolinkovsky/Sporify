@@ -43,9 +43,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func connectTapped(_ sender: UIButton) {
-        if let scene = self.view.window?.windowScene?.delegate as? SceneDelegate {
-            scene.appRemote.authorizeAndPlayURI(playURI)
-        }
+        SPTManager.shared.connect()
     }
     @IBAction func createAccountTapped(_ sender: UIButton) {
         loginAlert(user: user)
