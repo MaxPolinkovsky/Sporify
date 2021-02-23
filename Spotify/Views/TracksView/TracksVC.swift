@@ -12,9 +12,9 @@ class TracksVC: UIViewController {
     //https://johncodeos.com/how-to-add-search-in-uitableview-using-swift/
     
 //    let songs = SPTManager.shared.songs
-//    let songs =  SongsManager.shared.requestData()
-    let songs =  SongsManager.shared.makeContext()
-    var filteredSongs: [Song] = []
+    let songs =  SongsManager.shared.requestData()
+    
+    var filteredSongs = [Song]()
     var searching = false
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -37,5 +37,6 @@ class TracksVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }

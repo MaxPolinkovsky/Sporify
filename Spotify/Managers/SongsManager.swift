@@ -14,9 +14,8 @@ class SongsManager {
    let songs = SPTManager.shared.testSongs
     
     //создание сущности
-    func makeContext() -> [Song]{
+    func makeContext() {
         if let context = CoreDataManager.shared.managedContext, let _ = NSEntityDescription.entity(forEntityName: SongEntity.entityID, in: context){
-//                let modelSong = SongEntity(entity: entity, insertInto: context)
             var songsEntity = [Song]()
             
             for song in songs {
@@ -28,24 +27,23 @@ class SongsManager {
                     context.rollback()
                     print(error.localizedDescription)
                 }
-            return songsEntity
             }
-        return [Song]()
         }
-    
 
-//    //запрос данных
-//    func requestData() -> [Song] {
-//        if let context = CoreDataManager.shared.managedContext {
-//            let request = NSFetchRequest<SongEntity>(entityName: SongEntity.entityID)
-//            do {
-//                let result = try context.fetch(request)
-//                let songs = result.map{$0.initSong()}
-//                return songs
-//            } catch  {
-//                print(error.localizedDescription)
-//            }
-//        }
-//        return [Song]()
-//    }
+    //запрос данных
+    func requestData() -> [Song] {
+        if let context = CoreDataManager.shared.managedContext {
+            let request = NSFetchRequest<SongEntity>(entityName: SongEntity.entityID)
+            do {
+                let result = try context.fetch(request)
+                let songs = result.map{$0.initSong()}
+                print("Songs: \(songs)")
+                return songs
+                
+            } catch  {
+                print(error.localizedDescription)
+            }
+        }
+        return [Song]()
+    }
 }

@@ -38,6 +38,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        SongsManager.shared.makeContext()
 //        SPTManager.shared.authorizeAndPlay(playURI: playURI)
     }
     
